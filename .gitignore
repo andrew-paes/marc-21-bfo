@@ -1,0 +1,29 @@
+# Protege & Ontology files
+# ------------------------
+.protege/
+*.pprj.pins
+*.pprj.vis
+*.~*
+*.repository/
+
+# Autosave & Temporary files
+# --------------------------
+*-save.owl
+*.backup
+*.aspects
+*.swrl
+
+# IDE / System files (highly recommended)
+# ---------------------------------------
+.DS_Store
+Thumbs.db
+.classpath
+.project
+.settings/
+*.iml
+*.iws
+*.ipr
+.idea/
+target/
+build/
+bin/
