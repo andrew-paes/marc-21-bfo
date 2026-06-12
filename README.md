@@ -1,2 +1,2 @@
-# marc21-bfo
+# MARC21 BFO
 MARC 21 Basic Formal Ontology
