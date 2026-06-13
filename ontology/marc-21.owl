@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/marc-21/ontology"
      versionIRI="http://purl.org/marc-21/releases/1.0">
+    <Prefix name="" IRI="http://purl.org/marc-21/ontology#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -16,6 +17,289 @@
     <Import>http://purl.obolibrary.org/obo/bfo/2020/bfo.owl</Import>
     <Import>http://purl.obolibrary.org/obo/iao/2026-03-30/iao.owl</Import>
     <Import>http://purl.obolibrary.org/obo/ro/releases/2025-12-17/ro.owl</Import>
+    <Declaration>
+        <Class IRI="#bibliographic_item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#catalog_carrier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#library"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#publisher"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasISIL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasISNI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_City_Library"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_Dom_Casmurro_1899_Paper_Book"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_Garnier_Publisher"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_John_Reader"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_Local_HD_Server"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_Machado_de_Assis_Author"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_Maria_Cataloger"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#bibliographic_item"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#catalog_carrier"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#library"/>
+        <Class IRI="#organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#library"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasISIL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#organization"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#person"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#publisher"/>
+        <Class IRI="#organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#publisher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasISNI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#library"/>
+        <NamedIndividual IRI="#inst_City_Library"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#bibliographic_item"/>
+        <NamedIndividual IRI="#inst_Dom_Casmurro_1899_Paper_Book"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#publisher"/>
+        <NamedIndividual IRI="#inst_Garnier_Publisher"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#person"/>
+        <NamedIndividual IRI="#inst_John_Reader"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#catalog_carrier"/>
+        <NamedIndividual IRI="#inst_Local_HD_Server"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#person"/>
+        <NamedIndividual IRI="#inst_Machado_de_Assis_Author"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#person"/>
+        <NamedIndividual IRI="#inst_Maria_Cataloger"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISNI"/>
+        <NamedIndividual IRI="#inst_City_Library"/>
+        <Literal>BR-RS-0001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISNI"/>
+        <NamedIndividual IRI="#inst_Garnier_Publisher"/>
+        <Literal>000000012144567X</Literal>
+    </DataPropertyAssertion>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasISIL"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasISNI"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasISIL"/>
+        <Class IRI="#library"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasISNI"/>
+        <Class IRI="#publisher"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasISIL"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasISNI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bibliographic_item</IRI>
+        <Literal xml:lang="en-us">Bibliographic Item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bibliographic_item</IRI>
+        <Literal xml:lang="pt-br">Item Bibliográfico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#bibliographic_item</IRI>
+        <Literal xml:lang="en-us">It is a physical, tangible, and individualized object that you can hold in your hands. It has mass, three-dimensional extension, and defined macroscopic physical boundaries in the real world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#bibliographic_item</IRI>
+        <Literal xml:lang="pt-br">É o objeto físico, tangível e individualizado que você consegue segurar com as mãos. Possui massa, extensão tridimensional e limites físicos macroscópicos definidos no mundo real.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#catalog_carrier</IRI>
+        <Literal xml:lang="en-us">Catalog Carrier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#catalog_carrier</IRI>
+        <Literal xml:lang="pt-br">Suporte do Catálogo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#catalog_carrier</IRI>
+        <Literal xml:lang="pt-br">Dispositivo físico onde reside o arquivo informacional digital (servidor/disco rígido).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#catalog_carrier</IRI>
+        <Literal xml:lang="en-us">Physical device where the digital information file resides (server/hard drive).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasISIL</IRI>
+        <Literal xml:lang="en-us">Has ISIL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasISIL</IRI>
+        <Literal xml:lang="pt-br">Possui ISIL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasISIL</IRI>
+        <Literal xml:lang="en-us">Links a library organization to its normative International Standard Identifier for Libraries (ISO 15511).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasISIL</IRI>
+        <Literal xml:lang="pt-br">Vincula uma organização do tipo biblioteca ao seu identificador normativo internacional ISIL (ISO 15511).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasISNI</IRI>
+        <Literal xml:lang="en-us">Has ISNI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasISNI</IRI>
+        <Literal xml:lang="pt-br">Possui ISNI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasISNI</IRI>
+        <Literal xml:lang="en-us">Links a publishing organization to its normative International Standard Name Identifier (ISO 27729).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasISNI</IRI>
+        <Literal xml:lang="pt-br">Vincula uma organização editorial ao seu identificador normativo internacional ISNI (ISO 27729).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#library</IRI>
+        <Literal xml:lang="pt-br">Biblioteca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#library</IRI>
+        <Literal xml:lang="en-us">Library</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#library</IRI>
+        <Literal xml:lang="en-us">A physical institution responsible for the custody, processing, and dissemination of bibliographic collections.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#library</IRI>
+        <Literal xml:lang="pt-br">Instituição material responsável pela custódia, processamento e disseminação do acervo bibliográfico.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#person</IRI>
+        <Literal xml:lang="en-us">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#person</IRI>
+        <Literal xml:lang="pt-br">Pessoa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#person</IRI>
+        <Literal xml:lang="en-us">A biological and real human individual. A concrete being that exists in time and retains its own identity over time while undergoing changes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#person</IRI>
+        <Literal xml:lang="pt-br">É o indivíduo humano biológico e real. O ser concreto que existe no tempo que retém sua identidade própria ao longo do tempo enquanto passa por mudanças.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#publisher</IRI>
+        <Literal xml:lang="pt-br">Editora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#publisher</IRI>
+        <Literal xml:lang="en-us">Publisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#publisher</IRI>
+        <Literal xml:lang="en-us">A company or publishing entity responsible for the financing, production, and commercial distribution of publications.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#publisher</IRI>
+        <Literal xml:lang="pt-br">Empresa ou entidade editorial responsável pelo financiamento, produção e distribuição comercial de publicações.</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 

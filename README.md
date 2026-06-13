@@ -243,7 +243,7 @@ Protégé 5.6+
 
 Clone the repository:
 ```bash
-git checkout https://github.com/andrew-paes/marc-21-bfo.git
+git clone https://github.com/andrew-paes/marc-21-bfo.git
 ```
 
 Open in Protégé:
@@ -374,7 +374,9 @@ See LICENSE for details.
 # Citation
 
 If you use this ontology in academic work, please cite:
-Paes, Andrew; Magda, Mara;
+* PAES DA SILVA, ANDREW;
+* SOARES, M. M.;
+
 MARC21-BFO Ontology: A BFO-Based Ontological Model for Bibliographic Catalogs and MARC 21 Records.
 Version 1.0.
 
