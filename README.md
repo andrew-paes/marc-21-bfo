@@ -1,4 +1,4 @@
-# MARC 21 Alignment with Basic Formal Ontology (MARC21-BFO)
+# MARC-21-BFO: MARC 21 with Basic Formal Ontology
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](LICENSE)
 [![Ontology IRI](https://img.shields.io/badge/PURL-Ontology%20IRI-orange)](http://purl.org/marc-21/ontology)
