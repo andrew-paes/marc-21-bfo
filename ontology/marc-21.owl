@@ -45,6 +45,9 @@
         <Class IRI="#cataloging_status_specification"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#item_availability"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#library"/>
     </Declaration>
     <Declaration>
@@ -253,6 +256,10 @@
     <SubClassOf>
         <Class IRI="#cataloging_status_specification"/>
         <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item_availability"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#library"/>
@@ -1454,6 +1461,46 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
         <IRI>#is_concretized_in</IRI>
         <Literal xml:lang="pt-br">É concretizado em</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="pt-br">O exemplar tombamento 12345 encontra-se disponível para empréstimo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="en-us">The book copy Tomb Number 12345 is currently available for loan.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="pt-br">A disponibilidade de um exemplar pode variar ao longo do tempo em decorrência de processos de circulação como empréstimos, devoluções, reservas ou extravios.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="en-us">The availability of a bibliographic item may change over time as a consequence of circulation processes such as loans, returns, reservations, or losses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="en-us">A relational quality that inheres in a bibliographic item and reflects its current accessibility status within a library circulation context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="pt-br">Qualidade relacional que inere em um exemplar bibliográfico e reflete sua condição atual de acessibilidade no contexto de circulação de uma biblioteca.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="pt-br">Disponibilidade do Exemplar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#item_availability</IRI>
+        <Literal xml:lang="en-us">Item Availability</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
