@@ -39,7 +39,10 @@
         <Class IRI="#catalog_carrier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#cataloging_status"/>
+        <Class IRI="#cataloger_role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cataloging_status_specification"/>
     </Declaration>
     <Declaration>
         <Class IRI="#library"/>
@@ -57,7 +60,10 @@
         <Class IRI="#publisher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#record_completeness"/>
+        <Class IRI="#reade_role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#record_completeness_specification"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#cataloged_by"/>
@@ -72,16 +78,31 @@
         <ObjectProperty IRI="#exemplifies"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#exemplifies_manifestation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#has_creator"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#has_expression"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#has_role"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_specification"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_about"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_concretized_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_exemplified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_expression_of"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#owned_by"/>
@@ -153,20 +174,36 @@
         <NamedIndividual IRI="#inst_portuguese_original_expression"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#inst_quality_record_complete"/>
+        <NamedIndividual IRI="#inst_role_joao_reader"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#inst_quality_record_partial"/>
+        <NamedIndividual IRI="#inst_role_machado_author"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#inst_status_cataloged"/>
+        <NamedIndividual IRI="#inst_role_maria_cataloger"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#inst_status_in_preparation"/>
+        <NamedIndividual IRI="#inst_spec_record_complete"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#inst_status_reviewed"/>
+        <NamedIndividual IRI="#inst_spec_record_partial"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_spec_status_cataloged"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_spec_status_in_preparation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inst_spec_status_reviewed"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000442"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000197"/>
+            <Class IRI="#person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#bibliographic_expression"/>
         <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
@@ -181,7 +218,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#bibliographic_record"/>
-        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bibliographic_record"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+            <Class IRI="#catalog"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#bibliographic_work"/>
@@ -196,8 +240,19 @@
         <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#cataloging_status"/>
-        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000015"/>
+        <Class IRI="#cataloger_role"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cataloger_role"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000197"/>
+            <Class IRI="#person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cataloging_status_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#library"/>
@@ -212,7 +267,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#loan_record"/>
-        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#loan_record"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+            <Class IRI="#catalog"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#organization"/>
@@ -234,8 +296,19 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#record_completeness"/>
-        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000015"/>
+        <Class IRI="#reade_role"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#reade_role"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000197"/>
+            <Class IRI="#person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#record_completeness_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#library"/>
@@ -302,29 +375,56 @@
         <NamedIndividual IRI="#inst_portuguese_original_expression"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#record_completeness"/>
-        <NamedIndividual IRI="#inst_quality_record_complete"/>
+        <Class IRI="#reade_role"/>
+        <NamedIndividual IRI="#inst_role_joao_reader"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#record_completeness"/>
-        <NamedIndividual IRI="#inst_quality_record_partial"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000442"/>
+        <NamedIndividual IRI="#inst_role_machado_author"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#cataloging_status"/>
-        <NamedIndividual IRI="#inst_status_cataloged"/>
+        <Class IRI="#cataloger_role"/>
+        <NamedIndividual IRI="#inst_role_maria_cataloger"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#cataloging_status"/>
-        <NamedIndividual IRI="#inst_status_in_preparation"/>
+        <Class IRI="#record_completeness_specification"/>
+        <NamedIndividual IRI="#inst_spec_record_complete"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#cataloging_status"/>
-        <NamedIndividual IRI="#inst_status_reviewed"/>
+        <Class IRI="#record_completeness_specification"/>
+        <NamedIndividual IRI="#inst_spec_record_partial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#cataloging_status_specification"/>
+        <NamedIndividual IRI="#inst_spec_status_cataloged"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#cataloging_status_specification"/>
+        <NamedIndividual IRI="#inst_spec_status_in_preparation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#cataloging_status_specification"/>
+        <NamedIndividual IRI="#inst_spec_status_reviewed"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000059"/>
+        <ObjectProperty IRI="#exemplifies_manifestation"/>
         <NamedIndividual IRI="#inst_Dom_Casmurro_1899_Paper_Book"/>
         <NamedIndividual IRI="#inst_garnier_1899_manifestation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_role"/>
+        <NamedIndividual IRI="#inst_John_Reader"/>
+        <NamedIndividual IRI="#inst_role_joao_reader"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_role"/>
+        <NamedIndividual IRI="#inst_Machado_de_Assis_Author"/>
+        <NamedIndividual IRI="#inst_role_machado_author"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_role"/>
+        <NamedIndividual IRI="#inst_Maria_Cataloger"/>
+        <NamedIndividual IRI="#inst_role_maria_cataloger"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#exemplifies"/>
@@ -342,7 +442,7 @@
         <NamedIndividual IRI="#inst_City_Library"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000055"/>
+        <ObjectProperty IRI="#is_expression_of"/>
         <NamedIndividual IRI="#inst_english_translation_expression"/>
         <NamedIndividual IRI="#inst_dom_casmurro_work"/>
     </ObjectPropertyAssertion>
@@ -392,19 +492,9 @@
         <NamedIndividual IRI="#inst_Metailie_Publisher"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000055"/>
+        <ObjectProperty IRI="#is_expression_of"/>
         <NamedIndividual IRI="#inst_portuguese_original_expression"/>
         <NamedIndividual IRI="#inst_dom_casmurro_work"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000197"/>
-        <NamedIndividual IRI="#inst_quality_record_complete"/>
-        <NamedIndividual IRI="#inst_marc21_rec_123"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000197"/>
-        <NamedIndividual IRI="#inst_status_cataloged"/>
-        <NamedIndividual IRI="#inst_marc21_rec_123"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#cataloged_by"/>
@@ -450,10 +540,50 @@
         <ObjectProperty IRI="#represents_work"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_isbn"/>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#exemplifies_manifestation"/>
+        <ObjectProperty IRI="#is_exemplified_by"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exemplifies_manifestation"/>
+        <Class IRI="#bibliographic_item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_expression"/>
+        <Class IRI="#bibliographic_work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_specification"/>
+        <Class IRI="#bibliographic_record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_exemplified_by"/>
         <Class IRI="#bibliographic_manifestation"/>
-    </DataPropertyDomain>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_expression_of"/>
+        <Class IRI="#bibliographic_expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exemplifies_manifestation"/>
+        <Class IRI="#bibliographic_manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_expression"/>
+        <Class IRI="#bibliographic_expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_exemplified_by"/>
+        <Class IRI="#bibliographic_item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_expression_of"/>
+        <Class IRI="#bibliographic_work"/>
+    </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#has_isil"/>
         <Class IRI="#library"/>
@@ -466,10 +596,6 @@
         <DataProperty IRI="#has_title"/>
         <Class IRI="#bibliographic_manifestation"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_isbn"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#has_isil"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -681,43 +807,63 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="pt-br">este registro MARC 21 tem sua qualidade de status de catalogação atualizada para &quot;Catalogado&quot; após a bibliotecária profissional validar os campos de controle de autoridade e assinar a homologação do fluxo de metadados.</Literal>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="pt-br">O papel técnico que a profissional Maria desempenha no sistema enquanto realiza o tratamento de dados lógicos no formato MARC 21.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="en-us">this MARC 21 record has its cataloging status quality updated to &quot;cataloged&quot; after the professional librarian validates the authority control fields and signs off the metadata stream.</Literal>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="en-us">The technical role that Maria plays in the system while processing logical data in MARC 21 format.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="en-us">Chosen under bfo:quality -&gt; information_carrier because the technical processing status adheres directly to the logical workflow and lifecycle of the information record within the library system.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="pt-br">As funções operacionais de catalogação dependem de um vínculo externo (contrato, designação institucional ou turno de trabalho), cessando as suas prerrogativas quando esse contexto deixa de existir.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="pt-br">Escolhida sob bfo:quality -&gt; information_carrier porque o status de processamento técnico adere diretamente ao fluxo lógico do ciclo de vida do registro de informação dentro do sistema bibliográfico.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="en-us">A quality inhering in a bibliographic record that defines its current technical processing phase within the library system workflows.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="en-us">The operational functions of cataloging depend on an external link (contract, institutional designation, or work shift), ceasing its prerogatives when that context no longer exists.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="pt-br">Uma qualidade que inere em um registro bibliográfico que define a sua fase atual de tratamento técnico dentro dos fluxos de trabalho do sistema da biblioteca.</Literal>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="en-us">A functional and temporary role inhering in a person within an institutional context, authorizing them to perform technical processing and metadata creation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="pt-br">É o papel funcional e temporário que inere em uma pessoa dentro de um contexto institucional, autorizando-a a realizar o processamento técnico e a criação de metadados.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="en-us">Cataloging Status</Literal>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="en-us">Cataloger Role</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#cataloging_status</IRI>
-        <Literal xml:lang="pt-br">Status de Catalogação</Literal>
+        <IRI>#cataloger_role</IRI>
+        <Literal xml:lang="pt-br">Papel de Catalogador</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#cataloging_status_specification</IRI>
+        <Literal xml:lang="en-us">An informational specification metadata entity that declares and tracks the technical processing phase or workflow stage of a BibliographicRecord over time (In preparation, Cataloged, or Reviewed) within the library system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#cataloging_status_specification</IRI>
+        <Literal xml:lang="pt-br">É a entidade de especificação informacional (metadado) que declara e rastreia a fase de tratamento técnico ou workflow em que um BibliographicRecord se encontra no tempo (Em elaboração, Catalogado ou Revisado) dentro do sistema da biblioteca.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#cataloging_status_specification</IRI>
+        <Literal xml:lang="en-us">Cataloging Status Specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#cataloging_status_specification</IRI>
+        <Literal xml:lang="pt-br">Especificação de Status de Catalogação</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
@@ -840,6 +986,26 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
         <Literal xml:lang="en-us">Exemplifies</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#exemplifies_manifestation</IRI>
+        <Literal xml:lang="pt-br">Relaciona um item bibliográfico à manifestação bibliográfica que ele exemplifica.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#exemplifies_manifestation</IRI>
+        <Literal xml:lang="en-us">Relates a bibliographic item to the bibliographic manifestation that it exemplifies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#exemplifies_manifestation</IRI>
+        <Literal xml:lang="pt-br">Exemplifica a Manifestação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#exemplifies_manifestation</IRI>
+        <Literal xml:lang="en-us">Exemplifies Manifestation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
         <IRI>#has_creator</IRI>
         <Literal xml:lang="pt-br">a obra bibliográfica &quot;Dom Casmurro&quot; possui_criador a pessoa &quot;Machado de Assis&quot;.</Literal>
@@ -958,6 +1124,16 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
         <IRI>#has_role</IRI>
         <Literal xml:lang="pt-br">Possui Papel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#has_specification</IRI>
+        <Literal xml:lang="en-us">Has specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#has_specification</IRI>
+        <Literal xml:lang="pt-br">Tem especificação</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1190,53 +1366,28 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
         <Literal xml:lang="en-us">Original Portuguese Expression</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#inst_quality_record_complete</IRI>
-        <Literal xml:lang="pt-br">Indica que o registro possui todas as tags obrigatórias do MARC 21.</Literal>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#inst_spec_record_complete</IRI>
+        <Literal xml:lang="pt-br">Completo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#inst_quality_record_complete</IRI>
-        <Literal xml:lang="pt-br">Status Completo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#inst_quality_record_partial</IRI>
-        <Literal xml:lang="pt-br">Indica um registro temporário ou rascunho de catálogo. O produto existe logicamente no sistema, mas falta descrição, fotos, categorias e dimensões</Literal>
+        <IRI>#inst_spec_record_partial</IRI>
+        <Literal xml:lang="pt-br">Parcial</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#inst_quality_record_partial</IRI>
-        <Literal xml:lang="pt-br">Status Parcial</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#inst_status_cataloged</IRI>
-        <Literal xml:lang="pt-br">Ocorre quando o catalogador termina de inserir todas as tags exigidas pela política da instituição, altera o Leader/17 para nível pleno e salva o registro. O sistema o torna visível no catálogo público (OPAC) para os leitores pesquisarem. A qualidade de completude agora inere como completa.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#inst_status_cataloged</IRI>
+        <IRI>#inst_spec_status_cataloged</IRI>
         <Literal xml:lang="pt-br">Catalogado</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#inst_status_in_preparation</IRI>
-        <Literal xml:lang="pt-br">Ocorre no instante em que o registro provisório é aberto no sistema ou quando o catalogador está digitando as tags. A qualidade de completude ainda é parcial. O registro pertence apenas ao fluxo interno técnico.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#inst_status_in_preparation</IRI>
+        <IRI>#inst_spec_status_in_preparation</IRI>
         <Literal xml:lang="pt-br">Em Elaboração</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#inst_status_reviewed</IRI>
-        <Literal xml:lang="pt-br">O status muda para Revisado após uma auditoria de autoridade (garantir que o nome &quot;Assis, Machado de, 1839-1908&quot; está padronizado exatamente conforme o arquivo de autoridades internacionais).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#inst_status_reviewed</IRI>
+        <IRI>#inst_spec_status_reviewed</IRI>
         <Literal xml:lang="pt-br">Revisado</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1466,43 +1617,63 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="pt-br">este registro bibliográfico é categorizado como possuindo uma qualidade de completude do registro do tipo &quot;Completo&quot; porque ele contém todas as tags obrigatórias do MARC 21 (tais como 020, 100, 245 e 300) exigidas para incorporação ao nível de Biblioteca Nacional.</Literal>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="pt-br">O papel de usuário que passa a inerar em João assim que o seu cadastro administrativo na instituição é validado.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="en-us">this bibliographic record is categorized as having a complete record completeness quality because it contains all mandatory MARC 21 tags (such as 020, 100, 245, and 300) required for National Library level ingestion.</Literal>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="en-us">The user role that begins to inherit for João is activated as soon as his administrative registration with the institution is validated.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="en-us">Chosen under bfo:quality -&gt; information_carrier because the completeness of a MARC 21 record is an intrinsic attribute that measures the metadata enrichment of a data structure, rather than a macroscopic physical property of general matter.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="pt-br">A condição de usuário/leitor é ativada por um evento externo (o cadastro/emissão da carteirinha), conferindo direitos e deveres específicos de acesso ao acervo material.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="pt-br">Escolhida sob bfo:quality -&gt; information_carrier porque a completude de um registro MARC 21 é um atributo intrínseco que mede o nível de preenchimento de uma estrutura de dados e strings textuais codificadas, e não uma propriedade física macroscópica da matéria geral.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="en-us">An intrinsic quality inhering in a bibliographic record that indicates its level of data enrichment and structural detail according to MARC 21 standard rules.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="en-us">The user/reader status is activated by an external event (registration/issuance of the membership card), granting specific rights and responsibilities for accessing the material collection.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="pt-br">Uma qualidade intrínseca que inere em um registro bibliográfico que indica o seu nível de enriquecimento de dados e detalhamento estrutural de acordo com as regras do padrão MARC 21.</Literal>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="en-us">A social and legal role assumed by a person when they establish a formal administrative relationship with a library to consume and borrow items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="pt-br">É o papel social e jurídico assumido por uma pessoa quando ela estabelece uma relação administrativa formal com uma biblioteca para consumir e tomar itens por empréstimo.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="pt-br">Completude do Registro</Literal>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="pt-br">Papel de Leitor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>#record_completeness</IRI>
-        <Literal xml:lang="en-us">Record Completeness</Literal>
+        <IRI>#reade_role</IRI>
+        <Literal xml:lang="en-us">Reader Role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#record_completeness_specification</IRI>
+        <Literal xml:lang="en-us">An informational specification entity (metadata) associated with a BibliographicRecord that indicates its structural enrichment and data density level (e.g., Complete if it contains all mandatory tags, or Partial if it is a preliminary draft), objectively evaluated based on MARC 21 standard rules.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#record_completeness_specification</IRI>
+        <Literal xml:lang="pt-br">É a entidade de especificação informacional (metadado) associada a um BibliographicRecord que indica o seu nível de detalhamento e preenchimento estrutural (ex: Completo se contiver todas as tags obrigatórias, ou Parcial se for um rascunho preliminar), avaliada objetivamente com base nas regras normativas do formato MARC 21.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#record_completeness_specification</IRI>
+        <Literal xml:lang="pt-br">Especificação de Completude do Registro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>#record_completeness_specification</IRI>
+        <Literal xml:lang="en-us">Record Completeness Specification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
