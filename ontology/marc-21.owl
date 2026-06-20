@@ -17,6 +17,42 @@
     <Import>http://purl.obolibrary.org/obo/bfo/2020/bfo.owl</Import>
     <Import>http://purl.obolibrary.org/obo/iao/2026-03-30/iao.owl</Import>
     <Import>http://purl.obolibrary.org/obo/ro/releases/2025-12-17/ro.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <Literal xml:lang="en-us">MARC21-BFO is an ontology that aligns MARC 21 bibliographic concepts with BFO, IAO, RO and FRBR to provide a semantically grounded representation of bibliographic catalogs and library processes.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <Literal xml:lang="pt-br">MARC21-BFO é uma ontologia que alinha os conceitos bibliográficos do MARC 21 com BFO, IAO, RO e FRBR para fornecer uma representação semanticamente fundamentada de catálogos bibliográficos e processos de biblioteca.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en-us">Andrew Paes da Silva; Mara Magda;</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="pt-br">Ontologia que alinha conceitos bibliográficos do MARC 21 com BFO, IAO, RO e FRBR para interoperabilidade semântica e engenharia de ontologias baseada no realismo.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en-us">Ontology aligning MARC 21 bibliographic concepts with BFO, IAO, RO and FRBR for semantic interoperability and realism-based ontology engineering.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/license"/>
+        <Literal xml:lang="en-us">GNU General Public License v2.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <Literal xml:lang="en-us">UFRGS - Universidade Federal do Rio Grande do Sul</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en-us">MARC21-BFO Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="pt-br">Ontologia MARC21-BFO</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="#bibliographic_expression"/>
     </Declaration>
@@ -256,6 +292,13 @@
     <SubClassOf>
         <Class IRI="#bibliographic_item"/>
         <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bibliographic_item"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_isbn"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#bibliographic_manifestation"/>
@@ -1424,6 +1467,16 @@ Uma Obra é o nível mais abstrato da criação intelectual (a ideia da históri
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
         <IRI>#has_input</IRI>
         <Literal xml:lang="pt-br">Tem entrada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_isbn</IRI>
+        <Literal xml:lang="en-us">Has ISBN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_isbn</IRI>
+        <Literal xml:lang="pt-br">Tem ISBN</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
