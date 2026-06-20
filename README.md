@@ -10,20 +10,18 @@ An ontological serialization and alignment of the **MARC 21 Bibliographic Format
 
 # Provenance
 
-The ontology was developed at:
+The ontology was developed at Universidade Federal do Rio Grande do Sul (UFRGS)/Master Degree
 
-Master Degree
-Universidade Federal do Rio Grande do Sul (UFRGS)
+Development period: 2026
 
-Development period:
-2026
+Ontology engineers:
 
-Ontology engineer:
-Andrew Paes da Silva
-Mara Magda
+* Andrew Paes da Silva (https://orcid.org/0009-0006-3997-2300)
+* Mara Magda (https://orcid.org/0000-0002-9595-4207)
 
 Academic advisor:
-Prof. Dr. Mara Abel
+
+* Prof. Dr. Mara Abel
 
 # Overview
 
