@@ -8,6 +8,23 @@ An ontological serialization and alignment of the **MARC 21 Bibliographic Format
 
 ---
 
+# Provenance
+
+The ontology was developed at:
+
+Master Degree
+Universidade Federal do Rio Grande do Sul (UFRGS)
+
+Development period:
+2026
+
+Ontology engineer:
+Andrew Paes da Silva
+Mara Magda
+
+Academic advisor:
+Prof. Dr. Mara Abel
+
 # Overview
 
 The MARC21-BFO Ontology is an ontology engineering project developed to provide a semantically rigorous representation of bibliographic catalogs, MARC 21 records, library holdings, cataloging activities, and circulation processes.
@@ -319,8 +336,6 @@ marc-21-bfo/
 ├── releases/
 │   └── 1.0/
 │       └── marc21.owl
-├── docs/
-├── examples/
 ├── README.md
 └── LICENSE
 ```
