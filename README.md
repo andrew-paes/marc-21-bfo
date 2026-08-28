@@ -409,3 +409,4 @@ Planned future releases:
 * FRBR alignment refinements
 * Linked Open Data publication
 * OBO Foundry compliance assessment
+* 
